@@ -28,7 +28,10 @@ export const getAnalytics = async (req, res)=>{
 
 export const getConversations = async (req, res)=>{
     try {
-        const conversations = (await Conversation.find().populate('visitorId')).toSorted({createdAt: -1}).limit(50);
+        const conversations = await Conversation.find()
+            .sort({ createdAt: -1 })
+            .limit(50)
+            .populate('visitorId');
         const response = [];
         return res.status(200).json({conversations})
     } catch (error) {
@@ -39,6 +42,7 @@ export const getConversations = async (req, res)=>{
 
 export const getConversationsById = async (req,res)=>{
     const {conversationId} = req.params;
+    
     try {
         if(!mongoose.Types.ObjectId.isValid(conversationId)){
             return res.status(400).json({error: 'invalid Conversation Id'})
@@ -56,7 +60,7 @@ export const getConversationsById = async (req,res)=>{
                     profession: conversation.visitorId.profession,
                     goal: conversation.visitorId.goal
                 },
-                message: message.map(msg=>({
+                message: messages.map(msg=>({
                     sender: msg.senderId,
                     text: msg.text,
                     createdAt: msg.createdAt

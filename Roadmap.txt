@@ -1,0 +1,11 @@
+| Step | Learn              | Build                        |
+| ---- | ------------------ | ---------------------------- |
+| 1    | LLM API basics     | **AI Text Assistant**        |
+| 2    | Structured outputs | **AI Ticket Classifier**     |
+| 3    | Embeddings         | **Semantic Search Engine**   |
+| 4    | Vector DB          | **Document Search App**      |
+| 5    | RAG                | **Chat with PDF**            |
+| 6    | RAG improvement    | **Company Knowledge Bot**    |
+| 7    | Tool calling       | **AI Support Agent**         |
+| 8    | Agents/workflows   | **Support Automation Agent** |
+| 9    | Production AI      | **AI Customer Support SaaS** |

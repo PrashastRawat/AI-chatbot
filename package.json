@@ -1,0 +1,24 @@
+{
+  "name": "llm-playgrounds",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/PrashastRawat/AI-chatbot#readme",
+  "bugs": {
+    "url": "https://github.com/PrashastRawat/AI-chatbot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrashastRawat/AI-chatbot.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "start": "concurrently \"npm run start --prefix server\" \"npm run start --prefix client\""
+  },
+  "dependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

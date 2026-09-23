@@ -29,6 +29,8 @@ app.use('/api/', apiLimiter)
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+
+
 app.get('/', (req, res)=>{
     res.send("AI CHATBOT SERVER IS RUNNING")
 })
